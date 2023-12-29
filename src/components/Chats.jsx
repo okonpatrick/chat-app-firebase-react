@@ -43,9 +43,14 @@ const Chats = () => {
           <img src={chat[1].userInfo.photoURL} alt="" />
           <div className="userChatInfo">
             <span>{chat[1].userInfo.displayName}</span>
-            <p>{chat[1].lastMessage?.text} <span className="">{chat[1].lastMessage.text.length}</span></p>
+            <p>
+  {chat[1].lastMessage?.text}{' '}
+  <span className="inline-flex items-center justify-center h-5 w-5 bg-blue-500 text-white rounded-full">
+    {chat[1].lastMessage.text.length}
+  </span>
+</p>
 
-{console.log(chat[1].lastMessage.text.length)}
+{/* {console.log(chat[1].lastMessage.text.length)} */}
           </div>
         </div>
       ))}
