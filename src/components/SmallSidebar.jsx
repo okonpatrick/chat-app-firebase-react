@@ -1,52 +1,47 @@
+import { Link } from 'react-router-dom';
+import HomeImg from "../img/Budgie.png"
+import MessageIcon from "../img/messageIcon.png"
+import Gear from "../img/Gear.png"
+import Users from "../img/Users.png"
+import Phone from "../img/Phone.png"
 
-const MyComponent = () => {
+
+const SmallSidebar = () => {
   return (
-    <div>
-      <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
-        type="button"
-        className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      >
-        <span className="sr-only">Open sidebar</span>
-        <svg
-          className="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clipRule="evenodd"
-            fillRule="evenodd"
-            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-          />
-        </svg>
-      </button>
+    <div className="ml-5 pb-60 mb-70">
 
-      <aside
-        id="default-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-        aria-label="Sidebar"
-      >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <ul className="space-y-2 font-medium">
-            {/* ... (other list items) */}
-          </ul>
+      <div className="">
+      <aside id="" className=" top-0 left-0 z-40 w-20">
+        <div className=" bg-white dark:bg-white">
+          
+          <div className="flex flex-col items-center h-full text-white p-4">
+      <Link to="/" className="mb-4">
+        <img src={HomeImg} alt="Home" className="w-8 h-8" />
+      </Link>
+      <Link to="/" className="mb-4">
+        <img src={MessageIcon} className="w-8 h-8 border border-black-500 rounded" />
+      </Link>
+      <Link to={Users} className="mb-4">
+        <img src={Users} alt="Friends" className="w-8 h-8" />
+      </Link>
+      <Link to="/calls" className="mb-4">
+        <img src={Phone} alt="Calls" className="w-8 h-8" />
+      </Link>
+      <Link to="/settings" className="mb-60">
+            <img src={Gear} alt="Settings" className="w-8 h-8" />
+      </Link>
+    </div>
         </div>
       </aside>
+      
+    </div>
 
-      <div className="p-4 sm:ml-64">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            {/* ... (other grid items) */}
-          </div>
-          {/* ... (other elements and grids) */}
-        </div>
-      </div>
+
+
+
+
     </div>
   );
 };
 
-export default MyComponent;
+export default SmallSidebar;

@@ -1,32 +1,3 @@
-// import SignIn from "./components/auth/SignIn";
-// import SignUp from "./components/auth/SignUp";
-// import AuthDetails from "./components/AuthDetails";
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// import './App.css'
-
-// function App() {
-//   return (
-//     <>
-//     <Router>
-//      <Routes> 
-//         <Route path="/signin" element={ <SignIn />} />
-//           <Route path="/" element={<SignIn />} />
-//           <Route path="/signup" element={<SignUp />} />
-//          </Routes> 
-//          </Router>
-//       <AuthDetails />
-      
-//     </>
-//   )
-// }
-
-// export default App
-
-
-
-
-
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
